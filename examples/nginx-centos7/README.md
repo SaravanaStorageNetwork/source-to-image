@@ -44,15 +44,15 @@ The following command will create a builder image named nginx-centos7 based on t
 ```
 docker build -t nginx-centos7 .
 ```
-The builder image can also be created by using the *make* command since a *Makefile* is included.
+The builder image can also be created by using the *make build* command since a *Makefile* is included.
 
 Once image has finished building, the command *s2i usage nginx-centos7* will print out the help info that was defined in the *usage* script.
 
 #### Testing the builder image
 The builder image can be tested using the following commands:
 ```
-docker build -t nginx-centos7-candidate .
-IMAGE_NAME=nginx-centos7-candidate test/run
+docker build -t nginx-centos7 .
+IMAGE_NAME=nginx-centos7 test/run
 ```
 The builder image can also be tested by using the *make test* command since a *Makefile* is included.
 
